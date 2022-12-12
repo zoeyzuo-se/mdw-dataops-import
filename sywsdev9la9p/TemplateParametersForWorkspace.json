@@ -1,0 +1,58 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"workspaceName": {
+			"value": "sywsdev9la9p"
+		},
+		"sywsdev9la9p-WorkspaceDefaultSqlServer_connectionString": {
+			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:sywsdev9la9p.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
+		},
+		"P_Ingest_MelbParkingData_properties_5_sqlPool_referenceName": {
+			"value": "syndpdev9la9p"
+		},
+		"Ls_AdlsGen2_01_properties_typeProperties_url": {
+			"value": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "Ls_KeyVault_01",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "datalakeurl"
+			}
+		},
+		"Ls_KeyVault_01_properties_typeProperties_baseUrl": {
+			"value": "https://mdwdops-kv-dev-9la9p.vault.azure.net/"
+		},
+		"Ls_Rest_MelParkSensors_01_properties_typeProperties_url": {
+			"value": "https://data.melbourne.vic.gov.au/resource/"
+		},
+		"Ls_Rest_MelParkSensors_01_properties_typeProperties_enableServerCertificateValidation": {
+			"value": true
+		},
+		"Ls_Rest_MelParkSensors_01_properties_typeProperties_authenticationType": {
+			"value": "Anonymous"
+		},
+		"sywsdev9la9p-WorkspaceDefaultSqlServer_properties_typeProperties_connectionString": {
+			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:sywsdev9la9p.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
+		},
+		"sywsdev9la9p-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://mdwdopsst2dev9la9p.dfs.core.windows.net"
+		},
+		"00_setup_properties_bigDataPool_referenceName": {
+			"value": "synspdev9la9p"
+		},
+		"01a_explore_properties_bigDataPool_referenceName": {
+			"value": "synspdev9la9p"
+		},
+		"01b_explore_sqlserverless_properties_bigDataPool_referenceName": {
+			"value": "synspdev9la9p"
+		},
+		"02_standardize_properties_bigDataPool_referenceName": {
+			"value": "synspdev9la9p"
+		},
+		"03_transform_properties_bigDataPool_referenceName": {
+			"value": "synspdev9la9p"
+		}
+	}
+}
