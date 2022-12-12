@@ -18,7 +18,7 @@
 				"spark.dynamicAllocation.enabled": "false",
 				"spark.dynamicAllocation.minExecutors": "2",
 				"spark.dynamicAllocation.maxExecutors": "2",
-				"spark.autotune.trackingId": "bf77f78e-3c78-4c56-aac0-fd4bed890a11"
+				"spark.autotune.trackingId": "4fed4cee-315c-4d87-be46-c940bd67a0e5"
 			}
 		},
 		"metadata": {
@@ -81,7 +81,8 @@
 				},
 				"source": [
 					"keyvaultlsname = 'Ls_KeyVault_01'\n",
-					"adls2lsname = 'Ls_AdlsGen2_01'"
+					"adls2lsname = 'Ls_AdlsGen2_01'\n",
+					"test=\"trigger\""
 				],
 				"execution_count": 1
 			},
